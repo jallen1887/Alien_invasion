@@ -1,13 +1,15 @@
 """ Class for the player ship in Alien Invasion """
 
 import pygame
+from pygame.sprite import Sprite
 
-class Ship():
+class Ship(Sprite):
     """ Ship class for the player ship """
 
     def __init__(self, ai_settings, screen):
         """ Initialize the ship and set its starting position """
 
+        super(Ship,self).__init__()
         self.screen = screen
         self.ai_settings = ai_settings
 
